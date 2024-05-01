@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>on</title>
+    <style>
+      button {
+        padding: 10px;
+        background-color: red;
+        border-radius: 10px;
+        border: none;
+        color: white;
+      }
+      .sub {
+        padding: 10px;
+        background-color: gray;
+        border-radius: 10px;
+        border: none;
+        color: white;
+      }
+      body {
+        background-color: black;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button onclick="clicker()">On</button>
+    </div>
+  </body>
+  <script>
+    function clicker() {
+      var button = document.querySelector("button");
+      if (button.innerHTML == "On") {
+        button.innerHTML = "Off";
+        document.body.style.background = "orangered";
+        button.classList.add("sub");
+      } else if (button.innerHTML == "Off") {
+        button.innerHTML = "On";
+        document.body.style.background = "black";
+
+        button.classList.remove("sub");
+      }
+    }
+  </script>
+</html>
